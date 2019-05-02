@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(vterm)
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: neovim
+BuildRequires: qt5-macros
 Requires: neovim
 
 %description
