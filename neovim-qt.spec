@@ -1,8 +1,8 @@
 Name: neovim-qt
-Version: 0.2.0
-Release: 2
+Version: 0.2.12
+Release: 1
 # 
-Source0: https://github.com/equalsraf/neovim-qt/archive/v0.2.0.zip 
+Source0: https://github.com/equalsraf/neovim-qt/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Qt frontend for the neovim editor
 URL: https://github.com/equalsraf/neovim-qt
 License: GPL
@@ -17,18 +17,20 @@ BuildRequires: pkgconfig(unibilium)
 BuildRequires: pkgconfig(vterm)
 BuildRequires: cmake
 BuildRequires: ninja
+BuildRequires: neovim
+Requires: neovim
 
 %description
 Qt frontend for the neovim editor
 
 %prep
-%setup
+%autosetup -p1
 %cmake_qt5 \
 	-DUSE_SYSTEM_MSGPACK:BOOL=ON \
 	-G Ninja
 
 %build
-ninja -C build
+%ninja_build -C build
 
 %install
 %ninja_install -C build
