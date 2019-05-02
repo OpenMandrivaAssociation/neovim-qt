@@ -19,6 +19,7 @@ BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: neovim
 BuildRequires: qt5-macros
+BuildRequires: qmake5
 Requires: neovim
 
 %description
