@@ -1,5 +1,5 @@
 Name: neovim-qt
-Version:	0.2.13
+Version:	0.2.14
 Release:	1
 # 
 Source0: https://github.com/equalsraf/neovim-qt/archive/v%{version}/%{name}-%{version}.tar.gz
@@ -42,4 +42,4 @@ Qt frontend for the neovim editor
 %{_bindir}/*
 %{_datadir}/applications/*.desktop
 %{_datadir}/nvim-qt
-%{_datadir}/pixmaps/nvim-qt.*
+%{_datadir}/icons/hicolor/*/apps/nvim-qt.*
