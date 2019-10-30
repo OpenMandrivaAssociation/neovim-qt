@@ -1,5 +1,5 @@
 Name: neovim-qt
-Version:	0.2.14
+Version:	0.2.15
 Release:	1
 # 
 Source0: https://github.com/equalsraf/neovim-qt/archive/v%{version}/%{name}-%{version}.tar.gz
