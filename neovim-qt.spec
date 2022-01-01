@@ -16,6 +16,7 @@ BuildRequires: cmake(Qt5Widgets)
 BuildRequires: pkgconfig(termkey)
 BuildRequires: pkgconfig(unibilium)
 BuildRequires: pkgconfig(vterm)
+BuildRequires: pkgconfig(libluv)
 BuildRequires: cmake(msgpack)
 BuildRequires: cmake
 BuildRequires: ninja
