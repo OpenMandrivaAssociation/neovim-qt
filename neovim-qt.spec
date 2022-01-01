@@ -10,6 +10,7 @@ Group: Editors
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Network)
+BuildRequires: cmake(Qt5Svg)
 BuildRequires: cmake(Qt5Test)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: pkgconfig(termkey)
