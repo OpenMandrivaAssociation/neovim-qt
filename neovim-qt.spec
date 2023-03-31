@@ -1,6 +1,6 @@
 Name: neovim-qt
 Version:	0.2.17
-Release:	1
+Release:	2
 # 
 Source0: https://github.com/equalsraf/neovim-qt/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Qt frontend for the neovim editor
