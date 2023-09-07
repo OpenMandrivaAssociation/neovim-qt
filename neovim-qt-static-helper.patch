@@ -1,0 +1,12 @@
+diff -up neovim-qt-0.2.17/src/gui/CMakeLists.txt.omv~ neovim-qt-0.2.17/src/gui/CMakeLists.txt
+--- neovim-qt-0.2.17/src/gui/CMakeLists.txt.omv~	2023-09-07 23:06:33.067337818 +0200
++++ neovim-qt-0.2.17/src/gui/CMakeLists.txt	2023-09-07 23:06:59.426617390 +0200
+@@ -38,7 +38,7 @@ add_subdirectory(shellwidget)
+ include(GNUInstallDirs)
+ set(RUNTIME_PATH )
+ 
+-add_library(neovim-qt-gui
++add_library(neovim-qt-gui STATIC
+ 	app.cpp
+ 	contextmenu.cpp
+ 	errorwidget.cpp
