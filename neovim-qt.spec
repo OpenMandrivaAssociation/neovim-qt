@@ -1,36 +1,41 @@
+%define git 20230907
+
 Name: neovim-qt
-Version:	0.2.17
-Release:	3
-# 
+Version:	0.2.18
+Release:	%{?git:0.%{git}.}1
+%if 0%{?git:1}
+Source0: https://github.com/equalsraf/neovim-qt/archive/refs/heads/master.tar.gz
+%else
 Source0: https://github.com/equalsraf/neovim-qt/archive/v%{version}/%{name}-%{version}.tar.gz
+%endif
 Summary: Qt frontend for the neovim editor
 URL: https://github.com/equalsraf/neovim-qt
 License: GPL
 Group: Editors
-BuildRequires: cmake(Qt5Core)
-BuildRequires: cmake(Qt5Gui)
-BuildRequires: cmake(Qt5Network)
-BuildRequires: cmake(Qt5Svg)
-BuildRequires: cmake(Qt5Test)
-BuildRequires: cmake(Qt5Widgets)
+BuildRequires: cmake(Qt6)
+BuildRequires: cmake(Qt6Core)
+BuildRequires: cmake(Qt6Gui)
+BuildRequires: cmake(Qt6Network)
+BuildRequires: cmake(Qt6Svg)
+BuildRequires: cmake(Qt6Test)
+BuildRequires: cmake(Qt6Widgets)
 BuildRequires: pkgconfig(termkey)
 BuildRequires: pkgconfig(unibilium)
 BuildRequires: pkgconfig(vterm)
 BuildRequires: pkgconfig(libluv)
-BuildRequires: cmake(msgpack)
+BuildRequires: cmake(msgpack-c)
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: neovim
-BuildRequires: qt5-macros
-BuildRequires: qmake5
 Requires: neovim
 
 %description
 Qt frontend for the neovim editor
 
 %prep
-%autosetup -p1
-%cmake_qt5 \
+%autosetup -p1 -n %{name}-%{?git:master}%{!?git:%{version}}
+%cmake \
+	-DWITH_QT=Qt6 \
 	-DUSE_SYSTEM_MSGPACK:BOOL=ON \
 	-G Ninja
 
