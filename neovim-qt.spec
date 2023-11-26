@@ -1,4 +1,4 @@
-%define git 20230907
+%define git 20231126
 
 Name:		neovim-qt
 Version:	0.2.18
