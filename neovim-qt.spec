@@ -1,7 +1,7 @@
-%define git 20231126
+#define git 20231126
 
 Name:		neovim-qt
-Version:	0.2.18
+Version:	0.2.19
 Release:	%{?git:0.%{git}.}1
 Summary: 	Qt frontend for the neovim editor
 URL:		https://github.com/equalsraf/neovim-qt
